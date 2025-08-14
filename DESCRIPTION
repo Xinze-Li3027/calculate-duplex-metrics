@@ -1,0 +1,15 @@
+Package: CalcDuplexMetrics
+Title: Calculate Duplex Metrics
+Version: 0.1.0
+Authors@R: person("Your", "Name", email = "your.email@example.com", role = c("aut", "cre"))
+Description: CLI tool for calculating duplex metrics from summarised read information
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Depends: 
+    R (>= 4.0.0)
+Imports:
+    argparse
+Suggests:
+    testthat (>= 3.0.0)

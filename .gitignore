@@ -1,0 +1,17 @@
+.Rhistory
+.Rapp.history
+
+.RData
+.RDataTmp
+
+.Ruserdata
+
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/staging/
+
+.DS_Store
+*.swp
