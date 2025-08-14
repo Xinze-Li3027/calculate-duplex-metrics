@@ -7,4 +7,8 @@ duplex metrics.
 
 ## Usage
 
+```bash
+Rscript src/main.R --input data/test.rinfo --output metrics.csv
+```
+
 ## Outputs
