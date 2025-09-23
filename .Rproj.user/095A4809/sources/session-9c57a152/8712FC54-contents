@@ -1,0 +1,72 @@
+---
+title: "Test"
+output: html_document
+date: "2025-09-09"
+---
+
+
+
+```{r}
+Sys.setenv(PYTHON = "C:/Users/lixz3/AppData/Local/Programs/Python/Python313/python.exe")
+options(python_cmd = "C:/Users/lixz3/AppData/Local/Programs/Python/Python313/python.exe")
+
+```
+
+```{r}
+# Load Dylan's functions
+source("R/calculate.R")
+
+# Manually simulate parsed CLI arguments
+args <- list(
+  input = "C:\\Users\\lixz3\\Desktop\\Internship\\QC\\Dataset\\NanoMB1Rep1_HJK2GDSX3_CGGCTAAT-CTCGTTCT_L001.txt",
+  output = "C:\\Users\\lixz3\\Desktop\\Internship\\Results\\sample_metrics.csv",
+  verbose = TRUE
+)
+
+# Now you can safely call process_data()
+result <- process_data(args$input, args$output)
+
+print(result)
+
+```
+
+
+
+
+```{r}
+main <- function() {
+  args <- parse_arguments()  # Parse command-line arguments
+  result <- process_data(args$input, args$output)  # Process the data
+  
+  if (result$success) {
+    cat("Process completed successfully\n")
+    quit(status = 0)
+  } else {
+    cat("Process failed:", result$error, "\n")
+    quit(status = 1)
+  }
+}
+```
+
+
+
+```{r}
+args$input
+# "data/sample.rinfo.txt.gz"
+
+args$output
+# "results/sample_duplex_metrics.csv"
+
+args$verbose
+# TRUE
+
+```
+
+```{r}
+
+```
+
+
+
+
+
